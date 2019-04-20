@@ -1,5 +1,52 @@
    'use strict';
 
+var counter = function(){
+    var i=0;
+    return{
+        get: function(){
+            return i;
+        },
+        set: function(val){
+            i=val;
+        },
+        increment:function(){
+            return ++i;
+        }
+    }
+}();
+counter.set(3);
+counter.increment();
+console.log(counter.get());
+
+var x =2;
+(function (n){
+    function init(){
+        x += n;
+        console.log(x);
+    }
+    init();
+}(1));
+console.log(x);
+
+
+
+    console.log(Number("1") - 1 ===0);
+
+var x=3;
+var o1 ={
+    x:2,
+    o2:{
+        x:1,
+        o3:function(){
+            return this.x;
+        }
+    }
+}
+console.log(o1.o2.o3());
+
+
+
+
     function nomeDoMes(m){
         m--;
         var meses = ['jan','fev','mar','abr','mai','jun','jul','ago','set','out','nov','dez'];
@@ -9,6 +56,16 @@
     }
     var mes = 13;
     
+    function soma(x,y){
+        console.log(arguments);
+        switch(arguments.length){
+            case 0: return 0;
+            case 1: return x;
+            default: return x+y;
+        }
+    }
+    console.log(soma(5,4));
+
     try{
         console.log(mes+' : '+nomeDoMes(mes));
     }catch(e){
