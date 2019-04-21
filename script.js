@@ -149,3 +149,65 @@ console.log(o1.o2.o3());
     console.log('idade:'+cliente.idade);
     console.log(cliente.nomeCompleto());
     
+
+
+//VETORES
+    var frutas = [];
+    frutas[0]='laranja';
+    frutas[1]='maca';
+    frutas[2]='pera';
+    frutas[3]='banana';
+
+    var fn = frutas.forEach(function(f){
+        console.log(f);
+    });
+    console.log(frutas.join(','));
+
+var v1 = [3,1,5,4,2];
+console.log(v1.sort());
+console.log(v1.reverse());
+console.log(v1.slice(2,3));
+console.log(v1.splice(2));
+
+
+
+//OBJETOS
+var pessoa = {
+    nome: 'Joao',
+    sobrenome: "Silva",
+    idade: '35',
+    casado: 'false',
+    contatos: ['(31)32321212','fulano@gmail.com'],
+    nomeCompleto: function(){
+        return this.nome+' '+this.sobrenome;
+    },
+    endereco: {
+        rua: 'Av Brasil',
+        numero: 110
+    }
+};
+console.log(pessoa);
+console.log(pessoa.nomeCompleto());
+console.log(pessoa.idade);
+
+var joao = Object.create(pessoa);
+
+
+var ranking = {
+    pos: 0,
+    get getPos(){
+        return ("0"+this.pos).substr(-2);
+    },
+    set setPos(n){
+        if(n>0 && n<=100)
+            this.pos = n;
+        else
+            console.log('erro: n fora da faixa');
+    }
+};
+
+console.log(ranking.getPos);
+ranking.setPos = 7;
+console.log(ranking.getPos);
+ranking.setPos = 100;
+console.log(ranking.getPos);
