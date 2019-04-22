@@ -211,3 +211,63 @@ ranking.setPos = 7;
 console.log(ranking.getPos);
 ranking.setPos = 100;
 console.log(ranking.getPos);
+
+//JSON - JavaScript Object Notation
+var produtos =
+{
+    "listaDeProdutos": [
+        {
+            "codigo": 1,
+            "nome": "Torraderia",
+            "preco": 134.50
+        },
+        {
+            "codigo": 1,
+            "nome": "Torraderia",
+            "preco": 120.30
+        },
+        {
+            "codigo": 1,
+            "nome": "Refrigerador",
+            "preco": 1240.00
+        }
+        
+    ]
+};
+console.log(produtos);
+console.log(JSON.stringify(produtos));
+console.log('Tamanho: '+JSON.stringify.length);
+var a = JSON.parse('{"msg": "isto é um objeto"}');
+console.log(a);
+
+//CLASSES - Syntatical sugar
+class Poligono{
+    constructor(largura,altura){
+        this.largura = largura;
+        this.altura = altura;
+    }
+    get area(){
+        return this.largura*this.altura;
+    }
+}
+const quadrado = new Poligono(10,10);
+console.log(quadrado.area);
+
+
+class Ponto{
+    constructor(x,y){
+        this.x=x;
+        this.y=y;
+    }
+    static distancia(a,b){
+        const dx = a.x-b.x;
+        const dy = a.y-b.y;
+        return Math.sqrt(dx*dx + dy*dy);
+    }
+    toString(){
+        return this.x+","+this.y;
+    }
+}
+    const p1 = new Ponto(5,5);
+    const p2 = new Ponto(10,10);
+    console.log(Ponto.distancia(p1,p2));
