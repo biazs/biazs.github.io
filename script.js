@@ -271,3 +271,13 @@ class Ponto{
     const p1 = new Ponto(5,5);
     const p2 = new Ponto(10,10);
     console.log(Ponto.distancia(p1,p2));
+
+
+
+function f() {
+    return { n: 1 };
+}
+console.log(typeof f());
+
+
+console.log(document.getElementById('para').style.fontSize = '14pt');
