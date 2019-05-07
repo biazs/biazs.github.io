@@ -1,0 +1,23 @@
+{
+  "name": "biazs.github.io",
+  "version": "1.0.0",
+  "description": "pos",
+  "main": "jquery-3.2.1.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/biazs/biazs.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/biazs/biazs.github.io/issues"
+  },
+  "homepage": "https://github.com/biazs/biazs.github.io#readme",
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "lodash": "^4.17.11"
+  }
+}

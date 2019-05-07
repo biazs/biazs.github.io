@@ -1,5 +1,5 @@
  console.log('Meu primeiro código!!');
-
+n
 // const count = 5;
 // console.log('count: %d', count);
 // // Prints: count: 5, to stdout
@@ -20,3 +20,5 @@ var tempoInicial = parseInt(dataInicial.getMilliseconds());
 
 var resultado = tempoFinal - tempoInicial;
 console.log('O tempo total gasto foi: '+resultado+' milisegundos');
+
+
