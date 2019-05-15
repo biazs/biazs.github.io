@@ -3,11 +3,28 @@ const chalk = require('chalk')
 const yargs = require('yargs')
 
 
+//Description: limpar o sofa
+//status: BACKLOG, IN_PROGRESS, DONE
+
 yargs.command({
     command:'add',
     describe:'Add a new task',
-    handler: function(){
-        console.log(chalk.green('Creating a new task'))
+    builder:{
+        name:{
+            describe:'Task name',
+            demandOption:true,
+            type:'string'
+        },
+        description:{
+            describe:'Task description',
+            demandOption:true,
+            type:'string'
+        }
+    },
+    handler: function(argv){
+        console.log(chalk.green.bold.inverse('Creating a new task: '))
+        console.log(`Name: ${argv.name}`)
+        console.log(`Description: ${argv.description}`)
     }
 })
 yargs.command({
@@ -34,4 +51,5 @@ yargs.command({
 
 
 // console.log(process.argv)
-console.log(yargs.argv)
+//console.log(yargs.argv)
+yargs.parse();
