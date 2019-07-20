@@ -18,7 +18,7 @@
   "homepage": "https://github.com/biazs/biazs.github.io#readme",
   "dependencies": {
     "chalk": "^2.4.2",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.13",
     "yargs": "^13.2.2"
   }
 }
